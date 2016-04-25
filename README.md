@@ -6,3 +6,5 @@ Official echo.js is only listen the \<body\> element, but I always meet this sce
 While call init(config):if the "config.container" is not a valid value, it will be setted "document.body".You need set it a element like document.getElementById("aBox") or just let it go.
 
 This is only added "container" config parameter, you can find other parameter from https://github.com/toddmotto/echo.
+
+中文说明：http://www.cnblogs.com/robc/p/5431425.html
