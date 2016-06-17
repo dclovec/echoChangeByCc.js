@@ -7,4 +7,9 @@ While call init(config):if the "config.container" is not a valid value, it will 
 
 This is only added "container" config parameter, you can find other parameter from https://github.com/toddmotto/echo.
 
+#Updated 2016-06-17
+Now you can init many instance in one page. See demo "test/test-container.html" for more.
+
+修改：现在可以初始化多个echo实例，在一个页面中共存。详见测试文件test/test-container.html
+
 中文说明：http://www.cnblogs.com/robc/p/5431425.html
