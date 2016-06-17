@@ -44,12 +44,26 @@
             line-height: 50px;
             margin:0 0 0 60px;
         }
+        #m2{
+        	display: none;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <p class="listTitle">Tlists</p>
         <ul class="main">
+            <li class="item">
+                <img src="about:blank" data-echo="" alt="" />
+                <p>title and describe</p>
+            </li>
+        </ul>
+        <ul id="m2" class="main">
             <li class="item">
                 <img src="about:blank" data-echo="" alt="" />
                 <p>title and describe</p>
@@ -70,6 +84,12 @@
             html="",
             index;
         
+        var obj1=echoChangeByCc.initNew({
+            container:main
+        }),
+        obj2=echoChangeByCc.initNew({
+            container:m2
+        });
         for(var cont=0;cont<3;cont++){
             for(var i=0;i<10;i++){
                 index=~~(3*Math.random());
@@ -77,9 +97,15 @@
             }
         }
         main.innerHTML=html;
-        echo.init({
-            container:main
-        });
+        for(var cont=0;cont<3;cont++){
+            for(var i=0;i<10;i++){
+                index=~~(3*Math.random());
+                html+="<li class=\"item\"><img src=\""+emptyImgBg+"\" data-echo=\""+picture[index]+"\" alt=\"\" /><p>title and describe</p></li>";
+            }
+        }
+        m2.innerHTML=html;
+        obj1.render();
+        obj2.render();
     </script>
 </body>
 </html>
